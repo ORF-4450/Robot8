@@ -87,7 +87,7 @@ public class Robot extends SampleRobot
         robotDrive.setInvertedMotor(RobotDrive.MotorType.kFrontRight, true);
         robotDrive.setInvertedMotor(RobotDrive.MotorType.kRearRight, true);
       	
-         Util.consoleLog("%s %s", PROGRAM_NAME, "end");
+        Util.consoleLog("%s %s", PROGRAM_NAME, "end");
     }
     catch (Throwable e) {e.printStackTrace(Util.logPrintStream);}
   }
