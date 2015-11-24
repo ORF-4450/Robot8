@@ -4,11 +4,9 @@
 # Generated files
 bin/
 build/
+dist/
 
 # Misc temp files
-Thumbs.db
 
 # Backups
 *.zip
-
-

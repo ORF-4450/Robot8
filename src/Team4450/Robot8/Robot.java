@@ -24,14 +24,14 @@ import edu.wpi.first.wpilibj.PowerDistributionPanel;
  * The VM is configured to automatically run this class, and to call the
  * functions corresponding to each mode, as described in the SimpleRobot
  * documentation. If you change the name of this class or the package after
- * creating this project, you must also update the manifest file in the resource
- * directory.
+ * creating this project, you must also update the build.properties file.
  */
+
 public class Robot extends SampleRobot 
 {
-  static final String  	PROGRAM_NAME = "RAC8-11.05.15-01";
+  static final String  	PROGRAM_NAME = "RAC8-11.23.15-01";
 
-  // robotdrive(front-left, rear-left, front-right, rear-right)
+  // Motor pwm port assignments (0=front-left, 1=rear-left, 2=front-right, 3=rear-right)
   final RobotDrive      robotDrive = new RobotDrive(0,1,2,3);
   final Joystick        utilityStick = new Joystick(2);	// 0 old ds configuration
   final Joystick        leftStick = new Joystick(0);	// 1
