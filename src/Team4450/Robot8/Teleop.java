@@ -39,6 +39,8 @@ class Teleop
 	//private DigitalInput	proxSwitch = new DigitalInput(4);
 	private AnalogInput		proxSwitchA = new AnalogInput(2);
 	
+	// Constructor.
+	
 	Teleop(Robot robot)
 	{
 		Util.consoleLog();
@@ -48,6 +50,8 @@ class Teleop
 		lift = 	new Lift(robot);
 	}
 
+	// Free all objects that need it.
+	
 	void dispose()
 	{
 		Util.consoleLog();
