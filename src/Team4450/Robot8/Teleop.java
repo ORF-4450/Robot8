@@ -132,6 +132,7 @@ class Teleop
 			//LCD.printLine(4, "leftY=%.4f  rightY=%.4f  pov=%d pov2=%d", leftY, rightY, povButton.lastPOVAngle, gamePad.GetLastPOVangle());
 			LCD.printLine(4, "leftY=%.4f  rightY=%.4f", leftY, rightY);
 
+			// GamePad testing.
 			//rightY = gamePad.GetRightY();
 			//leftY = gamePad.GetLeftY();
 			
@@ -139,6 +140,7 @@ class Teleop
 			//LCD.printLine(5, "lt=%.4f  rt%.4f  pov=%d pov2=%d", gamePad.GetLeftTrigger(), gamePad.GetRightTrigger(), povButton.lastPOVAngle, gamePad.GetLastPOVangle());
 
 			// dead zone. Not used here as our JoyStick class has dead zone built in.
+			// Need this if you read the JS directly.
 			//if (Math.abs(rightY) < .1) rightY = 0;
 			//if (Math.abs(leftY) < .1) leftY = 0;
 			
@@ -150,8 +152,6 @@ class Teleop
 			// Set motors.
 
 			robot.robotDrive.tankDrive(leftY * powerFactor, rightY * powerFactor);
-			
-			//robot.robotDrive.arcadeDrive(rightY, rotateX);
 
 			// Set lift direction/speed.
 			
@@ -173,10 +173,12 @@ class Teleop
 
 			//LCD.printLine(10, "aX=%d, aY=%d, aZ=%d", (int) (accel.getX() * 10), (int) (accel.getY() * 10), (int) (accel.getZ() * 10));
 
-			LCD.printLine(10, "1234567890123456789012345678901234567890");
+			// Test printline with column.
+			//LCD.printLine(10, "1234567890123456789012345678901234567890");
 			//LCD.print(10, 5, "ZZZ");
-			LCD.print(10, 20, "ZZZ");
+			//LCD.print(10, 20, "ZZZ");
 			
+			// Test accelerometer.
 			//Util.consoleLog("aX=%d, aY=%d, aZ=%d", (int) (accel.getX() * 10), (int) (accel.getY() * 10), (int) (accel.getZ() * 10));
 			
 			//LCD.printLine(5, "proximity switch=%b", proxSwitch.get());
