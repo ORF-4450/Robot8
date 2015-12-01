@@ -2,6 +2,7 @@
 FRC Team 4450 Robot Control program.
 
 This is the 2015 competition robot control program created by the Olympia Robotics Federation (FRC Team 4450).
+Operates the robot "Tiberius" built for the FRC game "Recycle Rush".
 ***************************************************************************************************************
 
 Version 8.1
