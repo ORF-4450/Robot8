@@ -2,6 +2,7 @@
 // Cleaned up and reorganized in preparation for 2016. No changes to
 // functionality other than adding support for xbox controller and
 // demonstration code for gyro and internal accelerometer.
+// For Robot "Tiberius" built for FRC game Recycle Rush.
 
 package Team4450.Robot8;
 
@@ -29,7 +30,7 @@ import edu.wpi.first.wpilibj.PowerDistributionPanel;
 
 public class Robot extends SampleRobot 
 {
-  static final String  	PROGRAM_NAME = "RAC8-11.25.15-01";
+  static final String  	PROGRAM_NAME = "RAC8-12.01.15-01";
 
   // Motor pwm port assignments (0=front-left, 1=rear-left, 2=front-right, 3=rear-right)
   final RobotDrive      robotDrive = new RobotDrive(0,1,2,3);
