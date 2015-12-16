@@ -106,6 +106,7 @@ class Teleop
 		utilityStick.AddButton(JoyStickButtonIDs.TRIGGER);
 		utilityStick.AddButton(JoyStickButtonIDs.TOP_MIDDLE);
 		utilityStick.AddButton(JoyStickButtonIDs.TRIGGER);
+		utilityStick.AddButton(JoyStickButtonIDs.TOP_BACK);		// lift hold
         utilityStick.addJoyStickEventListener(new UtilityStickListener());
         utilityStick.Start();
         
@@ -171,8 +172,10 @@ class Teleop
 				Util.consoleLog("topmiddle cs=%b  ls=%b", rightStick.GetCurrentState(JoyStickButtonIDs.TOP_MIDDLE), rightStick.GetLatchedState(JoyStickButtonIDs.TOP_MIDDLE));
 			}
 
-			LCD.printLine(7, "encoder=%d", encoder.get());
+			//LCD.printLine(7, "encoder=%d", encoder.get());
 
+			LCD.printLine(7, "encoder=%d, hold=%b, power=%f", lift.encoder.get(), lift.holdMode, lift.liftMotorCan.get());
+			
 			LCD.printLine(9, "gyroAngle=%d, gyroRate=%d", (int) robot.gyro.getAngle(), (int) robot.gyro.getRate());
 
 			//LCD.printLine(10, "aX=%d, aY=%d, aZ=%d", (int) (accel.getX() * 10), (int) (accel.getY() * 10), (int) (accel.getZ() * 10));
@@ -222,8 +225,8 @@ class Teleop
 				SmartDashboard.putNumber("Power Factor", ((Teleop) launchPadEvent.getSource()).powerFactor * 100);
 			}
 			
-			if (launchPadEvent.control.id == LaunchPadControlIDs.BUTTON_TWO)
-				((Teleop) launchPadEvent.getSource()).encoder.reset();
+			//if (launchPadEvent.control.id == LaunchPadControlIDs.BUTTON_TWO)
+			//	((Teleop) launchPadEvent.getSource()).encoder.reset();
 			
 			if (launchPadEvent.control.id == LaunchPadControlIDs.BUTTON_EIGHT)
 			{
@@ -377,6 +380,12 @@ class Teleop
 					((Teleop) joyStickEvent.getSource()).lift.BinOpen();
 				else
 					((Teleop) joyStickEvent.getSource()).lift.BinClose();
+			
+			if (joyStickEvent.button.id.equals(JoyStickButtonIDs.TOP_BACK))
+				if (joyStickEvent.button.latchedState)
+					lift.holdPosition(utilityStick.GetY());
+				else
+					lift.holdPosition(0);
 	    }
 
 	    public void ButtonUp(JoyStickEvent joyStickEvent) 

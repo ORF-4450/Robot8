@@ -16,7 +16,7 @@ public class Autonomous
 	private Lift			lift;
 	
 	// encoder is plugged into dio port 2 - orange=+5v blue=signal, dio port 3 black=gnd yellow=signal. 
-	private Encoder		encoder = new Encoder(2, 3, true, EncodingType.k4X);
+	private Encoder			encoder = new Encoder(2, 3, true, EncodingType.k4X);
 
 	Autonomous(Robot robot)
 	{

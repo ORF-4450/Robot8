@@ -299,7 +299,7 @@ public class GamePad
     	            	}
     	            }
     	            
-    	            sleep(50);
+    	            sleep(25);
     	    	}
 	    	}
 	    	catch (InterruptedException e) {}
