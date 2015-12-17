@@ -30,7 +30,7 @@ import edu.wpi.first.wpilibj.PowerDistributionPanel;
 
 public class Robot extends SampleRobot 
 {
-  static final String  	PROGRAM_NAME = "RAC8-12.15.15-01";
+  static final String  	PROGRAM_NAME = "RAC8-12.16.15-02";
 
   // Motor pwm port assignments (0=front-left, 1=rear-left, 2=front-right, 3=rear-right)
   final RobotDrive      robotDrive = new RobotDrive(0,1,2,3);
@@ -137,7 +137,7 @@ public class Robot extends SampleRobot
 
    		// Start camera server using our class for dual usb cameras.
       
-   		cameraThread = new CameraFeed(this);
+   		cameraThread = new CameraFeed(robotProperties);
    		cameraThread.start();
      
    		// Start thread to monitor distance sensor.

@@ -20,11 +20,22 @@
   <!-- <property name="target" value=""/> -->
 
   <!-- Any other property in build.properties can also be overridden. -->
-  
+	
   <property file="${user.home}/wpilib/wpilib.properties"/>
   <property file="build.properties"/>
   <property file="${user.home}/wpilib/java/${version}/ant/build.properties"/>
-  
+
+  <!-- This script overwrites the classpath variable set in ant/build.properties to
+       include our list of external jar files as set in project build.properties. 
+       ant/build.properties has the wpilib and networktables jars hardcoded. 
+       There is no apparent clean connection between Eclipse variables and ant so
+       we have do this hardcoding kludge. -->
+	
+  <script language="javascript">
+  	classpath = project.getProperty("classpath");
+  	project.setProperty("classpath", classpath + ":" + project.getProperty("jarfiles"));
+  </script>
+  	
   <import file="${wpilib.ant.dir}/build.xml"/>
 
 </project> 

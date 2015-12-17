@@ -9,5 +9,6 @@
 	<classpathentry kind="var" path="networktables" sourcepath="networktables.sources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_25"/>
 	<classpathentry kind="var" path="JRE_LIB"/>
+	<classpathentry kind="var" path="RobotLib"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
