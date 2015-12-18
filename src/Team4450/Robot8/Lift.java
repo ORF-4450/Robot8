@@ -145,7 +145,7 @@ class Lift
 	// Automatically hold lift position.
 	void holdPosition(double speed)
 	{
-		Util.consoleLog("%f", speed);
+		Util.consoleLog("%.3f", speed);
 		
 		if (speed != 0)
 		{
