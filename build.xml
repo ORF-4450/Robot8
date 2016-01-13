@@ -17,7 +17,7 @@
   <!-- <property name="team-number" value=""/> -->
 
   <!-- By default the target is set to 10.TE.AM.2 -->
-  <!-- <property name="target" value=""/> -->
+  <!--property name="target" value="10.44.50.22"/-->
 
   <!-- Any other property in build.properties can also be overridden. -->
 	
@@ -31,10 +31,10 @@
        There is no apparent clean connection between Eclipse variables and ant so
        we have do this hardcoding kludge. -->
 	
-  <script language="javascript">
+  <!--script language="javascript">
   	classpath = project.getProperty("classpath");
   	project.setProperty("classpath", classpath + ":" + project.getProperty("jarfiles"));
-  </script>
+  </script-->
   	
   <import file="${wpilib.ant.dir}/build.xml"/>
 

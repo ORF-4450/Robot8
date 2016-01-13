@@ -12,7 +12,7 @@ import java.util.Properties;
 import Team4450.Lib.*;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.Gyro;
+import edu.wpi.first.wpilibj.AnalogGyro;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.SampleRobot;
@@ -30,7 +30,7 @@ import edu.wpi.first.wpilibj.PowerDistributionPanel;
 
 public class Robot extends SampleRobot 
 {
-  static final String  	PROGRAM_NAME = "RAC8-01.08.16-01";
+  static final String  	PROGRAM_NAME = "RAC8-01.11.16-01";
 
   // Motor pwm port assignments (0=front-left, 1=rear-left, 2=front-right, 3=rear-right)
   final RobotDrive      robotDrive = new RobotDrive(0,1,2,3);
@@ -40,7 +40,7 @@ public class Robot extends SampleRobot
   final Joystick		launchPad = new Joystick(3);
   final Joystick		gamePad = new Joystick(4);
   final Compressor		compressor = new Compressor(0);
-  final Gyro			gyro = new Gyro(0);
+  final AnalogGyro		gyro = new AnalogGyro(0);
 
   public Properties		robotProperties;
 	

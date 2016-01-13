@@ -2,7 +2,7 @@
 package Team4450.Robot8;
 
 import Team4450.Lib.*;
-import edu.wpi.first.wpilibj.CANTalon.ControlMode;
+import edu.wpi.first.wpilibj.CANTalon.TalonControlMode;
 import edu.wpi.first.wpilibj.CounterBase.EncodingType;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
@@ -42,7 +42,7 @@ class Lift
 		liftMotorCan = new CANTalon(1);
 		liftMotorCan.clearStickyFaults();
 		liftMotorCan.enableControl();
-		liftMotorCan.changeControlMode(ControlMode.PercentVbus);
+		liftMotorCan.changeControlMode(TalonControlMode.PercentVbus);
 		
 		// testing talon onboard limit switch via breakout board.
 		liftMotorCan.enableLimitSwitch(false, true);
